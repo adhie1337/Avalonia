@@ -44,5 +44,15 @@
           <TextBox Text="Name" Margin="5"/>
       </DockPanel>
     </Border>
+
+    <TextBlock Classes="h2">Case 5) DockPanel - Simulating first item stretch with multiple buttons</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <DockPanel>
+          <Button DockPanel.Dock="Right" Margin="5">Save</Button>
+          <Button DockPanel.Dock="Right" Margin="5">Reset</Button>
+          <TextBox Text="Name" Margin="5"/>
+      </DockPanel>
+    </Border>
   </StackPanel>
 </UserControl>
