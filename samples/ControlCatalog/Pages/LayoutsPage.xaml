@@ -1,0 +1,48 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ControlCatalog.Pages.LayoutsPage"
+             Padding="10">
+  <StackPanel Spacing="4">
+    <TextBlock Classes="h1">Layouts</TextBlock>
+    <TextBlock Classes="h2">Case 1) StackPanel - Horizontal</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <StackPanel Orientation="Horizontal"
+                Spacing="8">
+          <TextBox Text="Name"/>
+          <Button>Save</Button>
+      </StackPanel>
+    </Border>
+
+    <TextBlock Classes="h2">Case 2) StackPanel - Vertical</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <StackPanel Spacing="8">
+          <TextBox Text="Name"/>
+          <Button HorizontalAlignment="Stretch">Save</Button>
+      </StackPanel>
+    </Border>
+
+    <TextBlock Classes="h2">Case 3) StackPanel - Horizontal, First item stretched (doesn't work!)</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <StackPanel Orientation="Horizontal"
+                Spacing="8">
+          <TextBox Text="Name" HorizontalAlignment="Stretch"/>
+          <Button>Save</Button>
+      </StackPanel>
+    </Border>
+
+    <TextBlock Classes="h2">Case 4) DockPanel - Simulating first item stretch</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <DockPanel>
+          <Button DockPanel.Dock="Right" Margin="5">Save</Button>
+          <TextBox Text="Name" Margin="5"/>
+      </DockPanel>
+    </Border>
+  </StackPanel>
+</UserControl>
