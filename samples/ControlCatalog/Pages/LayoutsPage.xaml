@@ -66,5 +66,16 @@
           </StackPanel>
       </RelativePanel>
     </Border>
+
+    <TextBlock Classes="h2">Case 7) RelativePanel - Simulating first item stretch with multiple buttons</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <RelativePanel>
+          <TextBox Text="Name" Margin="5" x:Name="NameBox2"/>
+          <Button Margin="5" x:Name="ResetButton" RelativePanel.RightOf="NameBox2">Reset</Button>
+          <Button Margin="5" RelativePanel.RightOf="ResetButton">Save</Button>
+      </RelativePanel>
+    </Border>
+
   </StackPanel>
 </UserControl>
