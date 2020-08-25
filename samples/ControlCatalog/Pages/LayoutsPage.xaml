@@ -54,5 +54,17 @@
           <TextBox Text="Name" Margin="5"/>
       </DockPanel>
     </Border>
+
+    <TextBlock Classes="h2">Case 6) RelativePanel - Simulating first item stretch with multiple buttons</TextBlock>
+
+    <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+      <RelativePanel>
+          <TextBox Text="Name" Margin="5" x:Name="NameBox"/>
+          <StackPanel Orientation="Horizontal" RelativePanel.RightOf="NameBox">
+            <Button Margin="5">Reset</Button>
+            <Button Margin="5">Save</Button>
+          </StackPanel>
+      </RelativePanel>
+    </Border>
   </StackPanel>
 </UserControl>
